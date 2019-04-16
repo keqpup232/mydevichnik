@@ -111,6 +111,18 @@ add_action( 'widgets_init', 'mydevichnik_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+function mydevichnik_scripts() {
+	wp_enqueue_style( 'mydevichnik-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'mydevichnik-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css' );
+	wp_enqueue_style( 'mydevichnik-font-awesome', get_template_directory_uri() . '/assets/fonts/font-awesome-4.3.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'mydevichnik-all', get_template_directory_uri() . '/assets/css/all.css' );
+	wp_enqueue_style( 'mydevichnik-fonts-google', 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic' );
+
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery-1.11.2.min.js', array(), '' );	
+	wp_enqueue_script( 'mydevichnik-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.js', array(), '', true );
+	wp_enqueue_script( 'mydevichnik-jquery.main', get_template_directory_uri() . '/assets/js/jquery.main.js', array(), '', true );
+}
+add_action( 'wp_enqueue_scripts', 'mydevichnik_scripts' );
 
 /**
  * Implement the Custom Header feature.
