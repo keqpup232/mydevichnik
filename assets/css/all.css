@@ -556,6 +556,10 @@ p {
   float: left;
   }
   
+.page-title {
+  text-align:center;
+}	
+ 
 .kontakt {
     position: absolute;
     flex-wrap: wrap;
