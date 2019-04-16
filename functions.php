@@ -139,5 +139,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_action( 'wp_head', 'head_seo_meta_tags' );
+function head_seo_meta_tags(){
+	// description
+	echo '<meta name="description" content="Организация девичника в Москве. Девичник под ключ. мойдевичник ру. заказать девичник. подобрать услуги по организации девичника." />';
 
+	// keywords
+	echo '<meta name="keywords" content="девичник заказать организовать подобрать услуги мойдевичник под ключ " />';
+
+	// robots
+	echo '<meta name="robots" content="index,follow" />';
+}
+add_filter('xmlrpc_enabled', '__return_false');
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+remove_action( 'wp_head', 'feed_links', 2 );
+remove_action( 'wp_head', 'print_emoji_detection_script', 7);
 
