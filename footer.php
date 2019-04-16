@@ -22,6 +22,7 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/53229097" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
                     </div>
+					
                     <div class="col-md-6 text-right">
                     	<ul class="social">
                         	<li><a href="https://www.facebook.com/profile.php?id=100001787401407"><i class="fab fa-facebook-f"></i></a></li>
