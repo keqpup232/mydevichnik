@@ -172,3 +172,9 @@ remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'feed_links', 2 );
 remove_action( 'wp_head', 'print_emoji_detection_script', 7);
 
+add_action( 'init', 'bbloomer_delay_remove' );
+ 
+function bbloomer_delay_remove() {
+remove_action( 'woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
+}
